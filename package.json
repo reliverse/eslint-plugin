@@ -1,6 +1,6 @@
 {
   "name": "@reliverse/eslint-plugin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reliverse ESLint Plugin",
   "scripts": {
     "docs": "eslint-doc-generator",
