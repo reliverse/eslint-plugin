@@ -1,0 +1,55 @@
+{
+  "name": "@reliverse/eslint-plugin",
+  "version": "0.1.0",
+  "description": "Reliverse ESLint Plugin",
+  "scripts": {
+    "docs": "eslint-doc-generator",
+    "build": "tsup src/index.ts --format cjs,esm --dts --outDir lib && pnpm docs",
+    "dev": "vitest",
+    "test": "vitest run",
+    "lint": "pnpm eslint . && pnpm typecheck && pnpm test",
+    "ci": "pnpm lint && pnpm build",
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "types": "./lib/index.d.ts",
+  "main": "lib/index.js",
+  "keywords": ["eslint", "plugin"],
+  "type": "module",
+  "author": "reliverse",
+  "license": "MIT",
+  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf",
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@changesets/cli": "^2.27.7",
+    "@eslint/js": "^9.9.0",
+    "@types/eslint": "^9.6.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.3.0",
+    "@typescript-eslint/rule-tester": "^8.1.0",
+    "eslint": "^9.9.0",
+    "eslint-doc-generator": "^1.7.1",
+    "eslint-plugin-eslint-plugin": "^6.2.0",
+    "globals": "^15.9.0",
+    "knip": "^5.27.2",
+    "tsup": "^8.2.4",
+    "typescript": "5.6.0-beta",
+    "typescript-eslint": "^8.1.0",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.1.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint": "9"
+      }
+    }
+  }
+}
