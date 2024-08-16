@@ -4,13 +4,15 @@
   "description": "Reliverse ESLint Plugin",
   "scripts": {
     "docs": "eslint-doc-generator",
-    "build": "tsup src/index.ts --format cjs,esm --dts --outDir lib && pnpm docs",
+    "build": "tsup src/index.ts --format cjs,esm --dts --outDir lib --minify && pnpm docs",
+    "pub": "publish --access public",
     "dev": "vitest",
     "test": "vitest run",
     "lint": "pnpm eslint . && pnpm typecheck && pnpm test",
     "ci": "pnpm lint && pnpm build",
     "typecheck": "tsc --noEmit"
   },
+  "files": ["lib"],
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",

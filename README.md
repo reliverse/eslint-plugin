@@ -1,3 +1,3 @@
-# Reliverse EsLint Config
+# Reliverse ESLint Plugin
 
-🧮 A powerful ESLint v9.x config. More features coming soon!
+🧮 A powerful ESLint v9.x plugin. More features coming soon!
