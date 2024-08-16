@@ -4,7 +4,7 @@
   "description": "Reliverse ESLint Plugin",
   "scripts": {
     "docs": "eslint-doc-generator",
-    "build": "tsup src/index.ts --format cjs,esm --dts --outDir lib --minify && pnpm docs",
+    "build": "tsup src/index.ts --format cjs,esm --dts --outDir lib --minify",
     "pub": "publish --access public",
     "dev": "vitest",
     "test": "vitest run",
