@@ -1,11 +1,11 @@
 {
   "name": "@reliverse/eslint-plugin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Reliverse ESLint Plugin",
   "scripts": {
     "docs": "eslint-doc-generator",
     "build": "tsup src/index.ts --format cjs,esm --dts --outDir lib --minify",
-    "pub": "publish --access public",
+    "pub": "pnpm publish --access public --no-git-checks",
     "dev": "vitest",
     "test": "vitest run",
     "lint": "pnpm eslint . && pnpm typecheck && pnpm test",
@@ -34,6 +34,7 @@
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.3.0",
     "@typescript-eslint/rule-tester": "^8.1.0",
+    "auto": "^11.2.0",
     "eslint": "^9.9.0",
     "eslint-doc-generator": "^1.7.1",
     "eslint-plugin-eslint-plugin": "^6.2.0",
