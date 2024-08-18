@@ -1,6 +1,6 @@
 {
   "name": "@reliverse/eslint-plugin",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Reliverse ESLint Plugin",
   "scripts": {
     "docs": "eslint-doc-generator",
@@ -12,7 +12,9 @@
     "ci": "pnpm lint && pnpm build",
     "typecheck": "tsc --noEmit"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
@@ -21,7 +23,10 @@
   },
   "types": "./lib/index.d.ts",
   "main": "lib/index.js",
-  "keywords": ["eslint", "plugin"],
+  "keywords": [
+    "eslint",
+    "plugin"
+  ],
   "type": "module",
   "author": "reliverse",
   "license": "MIT",
